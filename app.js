@@ -58,7 +58,7 @@ function setupSquares(){
 			//grab color of clicked square
 			var clickedColor = this.style.background;
 			//compare color to pickedColor
-			if(clickedColor = pickedColor){ 
+			if(clickedColor === pickedColor){ 
 				updateColorName();
 				messageDisplay.textContent = "Correct!";
 				resetButton.textContent = "Play Again?"
@@ -132,7 +132,7 @@ resetButton.addEventListener("click", function(){
 /* change the colors of all the squares */ 
 function changeColors(color){
 	//loop through all squares
-	for(var i = 1; i < squares.length; i++){
+	for(var i = 0; i < squares.length; i++){
 		//change each color to match given color
 		squares[i].style.background = color;
 	}
